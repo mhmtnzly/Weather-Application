@@ -1,6 +1,5 @@
 import requests
 from datetime import datetime
-from PIL import Image
 class Weather:
     def __init__(self):
         self.api_key='875552e892c12b621740ef1a211464a7'
@@ -19,12 +18,10 @@ class Weather:
         self.weather=self.response['weather'][0]['main']
         self.icon=self.response['weather'][0]['icon']
         self.degree=int(self.response['main']['feels_like']-273.15)
-        return self.weather,self.degree
-    def icon_show(self):
-        image='{}@2x.png'.format(self.icon)
-        Image.open(image).show()
+        return self.weather,self.degree,self.icon
 
 a=Weather()
 a.get_weather('Ankara','tr')
-a.weather()
-a.icon_show()
+print(a.weather())
+print(a.date())
+
