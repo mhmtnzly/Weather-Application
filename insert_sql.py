@@ -184,7 +184,7 @@ Insert into places(city,region,country) values('Zevenbergen','Noord-Brabant','NL
 Insert into places(city,region,country) values('Zierikzee','Zeeland','NL');
 Insert into places(city,region,country) values('Zutphen','Gelderland','NL');
 Insert into places(city,region,country) values('Zwolle','Overijssel','NL');
-Insert into places(city,region,country,population) values(' New York [d] ',' New York ','USA', 8,804,190);
+Insert into places(city,region,country,population) values('New York','New York', 8804190,'USA');
 Insert into places(city,region,population,country) values('Los Angeles','California',3898747,'USA');
 Insert into places(city,region,population,country) values('Chicago','Illinois',2746388,'USA');
 Insert into places(city,region,population,country) values('Houston','Texas',2304580,'USA');
