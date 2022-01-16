@@ -2,26 +2,21 @@ import requests
 from datetime import datetime
 class Weather:
     def __init__(self):
-        self.api_key='875552e892c12b621740ef1a211464a7'
-        self.api_url='http://api.openweathermap.org/data/2.5/weather?'
-        self.url='https://openweathermap.org/img/wn/'
-    def get_weather(self,city_name,country_code):
-        self.response=requests.get(self.api_url+'q='+city_name+','+country_code+'&appid='+self.api_key).json()
+        '&q=istanbul&days=3&aqi=no&alerts=no'
+        self.api_key='2dbfd8657dcf46c7b09191433221601'
+        self.api_url='https://api.weatherapi.com/v1/forecast.json?key='
+    def get_weather(self,city_name,days):
+        self.response=requests.get(self.api_url+self.api_key+'&q='+city_name+'&days='+days+'&aqi=no&alerts=no').json()
         return self.response
-    def date(self):
-        date=self.response['dt']
-        date=datetime.fromtimestamp(date / 1e0)
-        d_date=date.strftime('%d-%b-%Y')
-        d_time=date.strftime('%H:%M:%S')
-        return d_date,d_time
-    def weather(self):
-        self.weather=self.response['weather'][0]['main']
-        self.icon=self.response['weather'][0]['icon']
-        self.degree=int(self.response['main']['feels_like']-273.15)
-        return self.weather,self.degree,self.icon
+    def get_update_date(self):
+        date=self.response['current']['last_updated']
+        return date
+    def current_weather(self):
+        current=self.response['current']['condition']
+        text=current['text']
+        icon=current['icon'].split('/')[-2:]
+        return text,icon
 
 a=Weather()
-a.get_weather('Ankara','tr')
-print(a.weather())
-print(a.date())
-
+c=a.get_weather('Amsterdam','1')
+print(a.current_weather())
