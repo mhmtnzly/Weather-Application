@@ -657,7 +657,7 @@ Insert into places(city,region,population,country) values('Federal Way','Washing
 Insert into places(city,region,population,country) values('Clinton','Michigan',100513,'USA');
 Insert into places(city,region,population,country) values('Edinburg','Texas',100243,'USA');
 Insert into places(city,region,population,country) values('Nampa','Idaho',100200,'USA');
-Insert into places(city,region,population,country) values('İstanbul','Marmara Bölgesi','15462452,'TUR');
+Insert into places(city,region,population,country) values('İstanbul','Marmara Bölgesi','15462452,'TUR');        ### this part is to insert city,region and country values
 Insert into places(city,region,population,country) values('Ankara','İç Anadolu Bölgesi','5663322,'TUR');
 Insert into places(city,region,population,country) values('İzmir','Ege Bölgesi','4394694,'TUR');
 Insert into places(city,region,population,country) values('Bursa','Marmara Bölgesi','3101833,'TUR');
