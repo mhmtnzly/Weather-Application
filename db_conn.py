@@ -5,10 +5,11 @@ class Weather_db:
         self.connect()
     
     def connect(self):
-        self.conn = psycopg2.connect(database = "Weather",user = "postgres",host = "localhost",password = "Halo107.")
+        self.conn = psycopg2.connect(database = "Weather",user = "postgres", host = "localhost",password = "1903")
         self.cur = self.conn.cursor()
 
     def name_search(self,city_name):
+        city_name = ' '.join([j.capitalize() for j in city_name.split(' ')])
         
         self.cur.execute(f"""
             SELECT city, region, population FROM places  where city = '{city_name}';

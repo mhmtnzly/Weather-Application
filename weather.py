@@ -15,6 +15,7 @@ class Weather_window(QtWidgets.QMainWindow):
         self.location = self.weather.my_location()
         
 
+
         self.search.clicked.connect(self.search_db)
 
         self.usa.clicked.connect(self.load_usa)
@@ -31,6 +32,11 @@ class Weather_window(QtWidgets.QMainWindow):
         self.days_forecast = self.weather.days_forecast()
         self.current_weather = self.weather.current_weather()
         self.hours_forecast = self.weather.hours_forecast()
+
+        searching = self.db.name_search(self.location)
+        self.city.setText(searching[0][0])
+        self.province.setText(searching[0][1])
+        self.population.setText(str(searching[0][2]))
 
 
         self.today_condition.setText(self.days_forecast[0][1])
@@ -73,9 +79,9 @@ class Weather_window(QtWidgets.QMainWindow):
         self.main_icon.setPixmap(QtGui.QPixmap('{}/{}'.format(self.current_weather[3][0],self.current_weather[3][1])))
     
     def search_db(self):
+        print(self.table.selectedItems())
         city_name_db = self.city_name.text()
         searching = self.db.name_search(city_name_db)
-        print(searching)
         
         
         if len(searching) > 0:
