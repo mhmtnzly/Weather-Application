@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets,uic,QtGui
 import test_rc
 from api import Weather
-from  db_conn import Weather_db
+from db_conn import Weather_db
 
 
 
@@ -11,19 +11,28 @@ class Weather_window(QtWidgets.QMainWindow):
         super(Weather_window, self).__init__() 
         uic.loadUi('ui/weatherapp.ui', self) 
         self.weather = Weather()
-        location = self.weather.my_location()
-        self.weather.get_weather(location,'3')
+        self.db = Weather_db()
+        self.location = self.weather.my_location()
+        
+
+        self.search.clicked.connect(self.search_db)
+
+        self.usa.clicked.connect(self.load_usa)
+        self.nl.clicked.connect(self.load_nl)
+        self.tr.clicked.connect(self.load_tr)
+
+        self.get()
+        
+        self.show()
+
+
+    def get(self):
+        self.weather.get_weather(self.location,'3')
         self.days_forecast = self.weather.days_forecast()
         self.current_weather = self.weather.current_weather()
         self.hours_forecast = self.weather.hours_forecast()
-        #self.search.clicked.connect(self.search)
-        self.usa.clicked.connect(self.load_usa)
-        #self.nl.clicked.connect(weather.nl_click)
-        #self.tr.clicked.connect(weather.tr_click)
 
-        self.get()
-        self.show()
-    def get(self):
+
         self.today_condition.setText(self.days_forecast[0][1])
         self.degree.setText('({}-{})'.format(self.days_forecast[0][3],self.days_forecast[0][2]))
         self.w_icon.setPixmap(QtGui.QPixmap('{}/{}'.format(self.days_forecast[0][4][0],self.days_forecast[0][4][1])))
@@ -58,30 +67,55 @@ class Weather_window(QtWidgets.QMainWindow):
         self.h_condition3.setText(self.hours_forecast[2][2])
         self.h_condition4.setText(self.hours_forecast[3][2])
         
-        print(self.current_weather)
 
         self.main_degree.setText(str(self.current_weather[2]))
         self.main_weather.setText(self.current_weather[1])
         self.main_icon.setPixmap(QtGui.QPixmap('{}/{}'.format(self.current_weather[3][0],self.current_weather[3][1])))
     
-    # def search(self,city_name):
-    #     city_name = self.city_name.text()
-    #      c_search = db_conn.Weather_db()
-    #     info = c_search.name_search()
-    #     self.city.setText(f'{str(info[0][0])}')
-    #     self.population.setText(f'{str(info[0][1])}')
-    #     self.province.setText(f'{str(info[0][2])}')
-
-    # def usa(self):
-    #     info = weather.usa_click()
+    def search_db(self):
+        city_name_db = self.city_name.text()
+        searching = self.db.name_search(city_name_db)
+        print(searching)
+        
+        
+        if len(searching) > 0:
+            city_name = searching[0][0]
+            population = searching[0][2]
+            province = searching[0][1]
+            self.city.setText(city_name)
+            self.province.setText(province)
+            self.population.setText(str(population))
+            self.location = city_name
+            self.get()
 
 
     def load_usa(self):
-        info = Weather_db.usa_click()
-        self.tafel.setRowCount(0)
-        for row_number,row_data in enumerate(info):
-            self.tafel.insertRow(row_number)
+        info = Weather_db()
+        usa = info.country_click('USA')
+        self.table.setRowCount(0)
+        for row_number,row_data in enumerate(usa):
+            self.table.insertRow(row_number)
             for column_number,data in enumerate(row_data):
-                self.tafel.setItem(row_number,column_number, QtWidgets.QTableWidgetItem(str(data)))
+                self.table.setItem(row_number,column_number, QtWidgets.QTableWidgetItem(str(data)))
+    
+    def load_nl(self):
+        info = Weather_db()
+        nl = info.country_click('NL')
+        self.table.setRowCount(0)
+        for row_number,row_data in enumerate(nl):
+            self.table.insertRow(row_number)
+            for column_number,data in enumerate(row_data):
+                self.table.setItem(row_number,column_number, QtWidgets.QTableWidgetItem(str(data)))
+
+    def load_tr(self):
+        info = Weather_db()
+        tr = info.country_click('TUR')
+        self.table.setRowCount(0)
+        for row_number,row_data in enumerate(tr):
+            self.table.insertRow(row_number)
+            for column_number,data in enumerate(row_data):
+                self.table.setItem(row_number,column_number, QtWidgets.QTableWidgetItem(str(data)))
+    
+   
 
 
