@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets,uic,QtGui
 import test_rc
 from api import Weather
+from  db_conn import Weather_db
 
 
 
@@ -15,6 +16,10 @@ class Weather_window(QtWidgets.QMainWindow):
         self.days_forecast = self.weather.days_forecast()
         self.current_weather = self.weather.current_weather()
         self.hours_forecast = self.weather.hours_forecast()
+        #self.search.clicked.connect(self.search)
+        self.usa.clicked.connect(self.load_usa)
+        #self.nl.clicked.connect(weather.nl_click)
+        #self.tr.clicked.connect(weather.tr_click)
 
         self.get()
         self.show()
@@ -58,3 +63,25 @@ class Weather_window(QtWidgets.QMainWindow):
         self.main_degree.setText(str(self.current_weather[2]))
         self.main_weather.setText(self.current_weather[1])
         self.main_icon.setPixmap(QtGui.QPixmap('{}/{}'.format(self.current_weather[3][0],self.current_weather[3][1])))
+    
+    # def search(self,city_name):
+    #     city_name = self.city_name.text()
+    #      c_search = db_conn.Weather_db()
+    #     info = c_search.name_search()
+    #     self.city.setText(f'{str(info[0][0])}')
+    #     self.population.setText(f'{str(info[0][1])}')
+    #     self.province.setText(f'{str(info[0][2])}')
+
+    # def usa(self):
+    #     info = weather.usa_click()
+
+
+    def load_usa(self):
+        info = Weather_db.usa_click()
+        self.tafel.setRowCount(0)
+        for row_number,row_data in enumerate(info):
+            self.tafel.insertRow(row_number)
+            for column_number,data in enumerate(row_data):
+                self.tafel.setItem(row_number,column_number, QtWidgets.QTableWidgetItem(str(data)))
+
+
