@@ -9,7 +9,7 @@ class Weather_db:
         self.cur = self.conn.cursor()
 
     def name_search(self,city_name):
-        x= city_name.capitalize()
+        
         self.cur.execute(f"""
             SELECT city, region, population FROM places  where city = '{x}';
             """)
