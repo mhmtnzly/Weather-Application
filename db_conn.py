@@ -11,7 +11,7 @@ class Weather_db:
     def name_search(self,city_name):
         
         self.cur.execute(f"""
-            SELECT city, region, population FROM places  where city = '{x}';
+            SELECT city, region, population FROM places  where city = '{city_name}';
             """)
         info = self.cur.fetchall()
         return info
