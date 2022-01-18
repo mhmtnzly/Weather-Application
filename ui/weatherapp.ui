@@ -1135,11 +1135,7 @@ background-color: rgb(188, 193, 200);
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-<<<<<<< HEAD
    <widget class="QTableWidget" name="table">
-=======
-   <widget class="QTableWidget" name="tafel">
->>>>>>> main
     <property name="geometry">
      <rect>
       <x>15</x>
@@ -1661,7 +1657,6 @@ background-color: rgb(188, 193, 200);
     <column/>
     <column/>
    </widget>
-<<<<<<< HEAD
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
@@ -1718,8 +1713,6 @@ border-bottom-left-radius: 10px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-=======
->>>>>>> main
   </widget>
  </widget>
  <resources>
