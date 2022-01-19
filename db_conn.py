@@ -5,7 +5,7 @@ class Weather_db:
         self.connect()
     
     def connect(self):
-        self.conn = psycopg2.connect(database = "Weather",user = "postgres", host = "localhost",password = "1903")
+        self.conn = psycopg2.connect(database = "Weather",user = "postgres", host = "localhost",password = "Halo107.")
         self.cur = self.conn.cursor()
 
     def name_search(self,city_name):

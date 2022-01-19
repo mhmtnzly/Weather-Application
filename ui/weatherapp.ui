@@ -495,7 +495,7 @@ background-color: rgb(188, 193, 200);
      <rect>
       <x>750</x>
       <y>260</y>
-      <width>100</width>
+      <width>120</width>
       <height>40</height>
      </rect>
     </property>
@@ -516,21 +516,21 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="main_weather">
     <property name="geometry">
      <rect>
-      <x>750</x>
+      <x>730</x>
       <y>310</y>
-      <width>100</width>
+      <width>200</width>
       <height>50</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
+      <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>asdfasd</string>
+     <string>partly cloudy</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1660,9 +1660,37 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>662</y>
+      <x>640</x>
+      <y>670</y>
       <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-top-right-radius: 10px;
+background-color: rgb(219, 255, 34,90);
+border-bottom-right-radius: 10px;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string>Last Update Time(Local)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="last_update">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>670</y>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
@@ -1685,32 +1713,21 @@ border-bottom-left-radius: 10px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QPushButton" name="location_button">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>660</y>
-      <width>131</width>
+      <x>420</x>
+      <y>670</y>
+      <width>75</width>
       <height>31</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
     <property name="styleSheet">
-     <string notr="true">border-top-right-radius: 10px;
-background-color: rgb(219, 255, 34,90);
-border-bottom-right-radius: 10px;
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;</string>
+     <string notr="true">background-color: rgb(188, 193, 200);
+</string>
     </property>
     <property name="text">
-     <string>TextLabel</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>Location</string>
     </property>
    </widget>
   </widget>
