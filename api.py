@@ -1,6 +1,6 @@
 import requests
 import geocoder
-
+import time
 
 class Weather:
 
@@ -14,6 +14,7 @@ class Weather:
         
     def get_weather(self,city_name,days):
         self.response = requests.get(self.api_url+self.api_key+'&q='+city_name+'&days='+days+'&aqi=no&alerts=no').json()
+        time.sleep(0.5)
         return self.response
 
     def current_weather(self):

@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets,uic,QtGui
+from PyQt5 import QtWidgets,uic,QtGui,QtCore
 import test_rc
 from api import Weather
 from db_conn import Weather_db
@@ -13,30 +13,32 @@ class Weather_window(QtWidgets.QMainWindow):
         self.weather = Weather()
         self.db = Weather_db()
         self.location = self.weather.my_location()
-        
-        self.table.cellClicked.connect(self.x)
-        
-
+        self.table.cellClicked.connect(self.city_weather_clicked)
         self.search.clicked.connect(self.search_db)
-
         self.usa.clicked.connect(self.load_usa)
         self.nl.clicked.connect(self.load_nl)
         self.tr.clicked.connect(self.load_tr)
-
+        self.quit.clicked.connect(QtCore.QCoreApplication.instance().quit)
         self.get()
         
         self.show()
 
-    def x(self,row,col):
-        print(row,col)
-        print(self.table.cellWidget(row,col))
+    def city_weather_clicked(self,row,col):
+        try:
+            self.location = self.table.item(row,col).text()
+            self.get()
+        except:
+            pass
+
     def get(self):
+
         self.weather.get_weather(self.location,'3')
         self.days_forecast = self.weather.days_forecast()
         self.current_weather = self.weather.current_weather()
         self.hours_forecast = self.weather.hours_forecast()
 
         searching = self.db.name_search(self.location)
+        
         self.city.setText(searching[0][0])
         self.province.setText(searching[0][1])
         self.population.setText(str(searching[0][2]))
@@ -123,7 +125,3 @@ class Weather_window(QtWidgets.QMainWindow):
             self.table.insertRow(row_number)
             for column_number,data in enumerate(row_data):
                 self.table.setItem(row_number,column_number, QtWidgets.QTableWidgetItem(str(data)))
-    
-   
-
-
