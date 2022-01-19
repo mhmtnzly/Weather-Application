@@ -159,7 +159,7 @@ border-bottom-left-radius: 10px;</string>
      <rect>
       <x>520</x>
       <y>40</y>
-      <width>151</width>
+      <width>171</width>
       <height>91</height>
      </rect>
     </property>
@@ -246,7 +246,7 @@ border-bottom-left-radius: 10px;</string>
      <rect>
       <x>160</x>
       <y>670</y>
-      <width>70</width>
+      <width>171</width>
       <height>30</height>
      </rect>
     </property>
@@ -470,8 +470,8 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="main_icon">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>160</y>
+      <x>780</x>
+      <y>170</y>
       <width>100</width>
       <height>88</height>
      </rect>
@@ -493,7 +493,7 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="main_degree">
     <property name="geometry">
      <rect>
-      <x>750</x>
+      <x>770</x>
       <y>260</y>
       <width>120</width>
       <height>40</height>
@@ -581,9 +581,9 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="today_condition">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>400</x>
       <y>300</y>
-      <width>120</width>
+      <width>181</width>
       <height>30</height>
      </rect>
     </property>
@@ -631,14 +631,15 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="tomorrow_condition">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>400</x>
       <y>440</y>
-      <width>120</width>
+      <width>181</width>
       <height>30</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>MS Shell Dlg 2</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -703,9 +704,9 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="after_tomorrow_condition">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>400</x>
       <y>570</y>
-      <width>120</width>
+      <width>181</width>
       <height>30</height>
      </rect>
     </property>
@@ -750,8 +751,8 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_icon1">
     <property name="geometry">
      <rect>
-      <x>635</x>
-      <y>370</y>
+      <x>690</x>
+      <y>360</y>
       <width>70</width>
       <height>60</height>
      </rect>
@@ -776,9 +777,9 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_condition1">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>630</x>
       <y>460</y>
-      <width>120</width>
+      <width>181</width>
       <height>30</height>
      </rect>
     </property>
@@ -800,9 +801,9 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_degree1">
     <property name="geometry">
      <rect>
-      <x>635</x>
+      <x>680</x>
       <y>430</y>
-      <width>70</width>
+      <width>80</width>
       <height>30</height>
      </rect>
     </property>
@@ -824,7 +825,7 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="hour1">
     <property name="geometry">
      <rect>
-      <x>545</x>
+      <x>590</x>
       <y>430</y>
       <width>75</width>
       <height>30</height>
@@ -847,8 +848,8 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_icon3">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>370</y>
+      <x>860</x>
+      <y>350</y>
       <width>70</width>
       <height>60</height>
      </rect>
@@ -873,9 +874,9 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_condition3">
     <property name="geometry">
      <rect>
-      <x>795</x>
+      <x>810</x>
       <y>460</y>
-      <width>120</width>
+      <width>181</width>
       <height>30</height>
      </rect>
     </property>
@@ -897,9 +898,9 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_degree3">
     <property name="geometry">
      <rect>
-      <x>820</x>
+      <x>860</x>
       <y>430</y>
-      <width>70</width>
+      <width>80</width>
       <height>30</height>
      </rect>
     </property>
@@ -921,7 +922,7 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="hour3">
     <property name="geometry">
      <rect>
-      <x>730</x>
+      <x>780</x>
       <y>430</y>
       <width>75</width>
       <height>30</height>
@@ -944,8 +945,8 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_icon2">
     <property name="geometry">
      <rect>
-      <x>635</x>
-      <y>520</y>
+      <x>690</x>
+      <y>510</y>
       <width>70</width>
       <height>60</height>
      </rect>
@@ -970,9 +971,9 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_condition2">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>620</x>
       <y>610</y>
-      <width>120</width>
+      <width>201</width>
       <height>30</height>
      </rect>
     </property>
@@ -994,9 +995,9 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_degree2">
     <property name="geometry">
      <rect>
-      <x>635</x>
-      <y>580</y>
-      <width>70</width>
+      <x>680</x>
+      <y>570</y>
+      <width>80</width>
       <height>30</height>
      </rect>
     </property>
@@ -1018,8 +1019,8 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="hour2">
     <property name="geometry">
      <rect>
-      <x>545</x>
-      <y>580</y>
+      <x>590</x>
+      <y>570</y>
       <width>75</width>
       <height>30</height>
      </rect>
@@ -1041,8 +1042,8 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_icon4">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>520</y>
+      <x>860</x>
+      <y>510</y>
       <width>70</width>
       <height>60</height>
      </rect>
@@ -1067,9 +1068,9 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_condition4">
     <property name="geometry">
      <rect>
-      <x>795</x>
+      <x>810</x>
       <y>610</y>
-      <width>120</width>
+      <width>181</width>
       <height>30</height>
      </rect>
     </property>
@@ -1091,9 +1092,9 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="h_degree4">
     <property name="geometry">
      <rect>
-      <x>820</x>
+      <x>860</x>
       <y>580</y>
-      <width>70</width>
+      <width>80</width>
       <height>30</height>
      </rect>
     </property>
@@ -1115,7 +1116,7 @@ background-color: rgb(188, 193, 200);
    <widget class="QLabel" name="hour4">
     <property name="geometry">
      <rect>
-      <x>730</x>
+      <x>780</x>
       <y>580</y>
       <width>75</width>
       <height>30</height>
@@ -1716,9 +1717,9 @@ border-bottom-left-radius: 10px;</string>
    <widget class="QPushButton" name="location_button">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>450</x>
       <y>670</y>
-      <width>75</width>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
