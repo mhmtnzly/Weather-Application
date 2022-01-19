@@ -1,4 +1,4 @@
-Insert into places(city,region,country) values('Aardenburg','Zeeland','NL');                    ### this part is to insert city,region and country values 
+Insert into places(city,region,country) values('Aardenburg','Zeeland','NL');                    
 Insert into places(city,region,country) values('Abbekerk','Noord-Holland','NL');
 Insert into places(city,region,country) values('Alkmaar','Noord-Holland','NL');
 Insert into places(city,region,country) values('Almelo','Overijssel','NL');
@@ -185,7 +185,7 @@ Insert into places(city,region,country) values('Zevenbergen','Noord-Brabant','NL
 Insert into places(city,region,country) values('Zierikzee','Zeeland','NL');
 Insert into places(city,region,country) values('Zutphen','Gelderland','NL');
 Insert into places(city,region,country) values('Zwolle','Overijssel','NL');
-UPDATE places SET population = 2520 WHERE city = 'Aardenburg';                                          ### this part is to insert population values
+UPDATE places SET population = 2520 WHERE city = 'Aardenburg';                                          
 UPDATE places SET population = 45650 WHERE city = 'Doetinchem';
 UPDATE places SET population = 11096 WHERE city = 'Doesburg';
 UPDATE places SET population = 1660 WHERE city = 'Domburg';
@@ -366,7 +366,16 @@ UPDATE places SET population = 871873 WHERE city = 'Amsterdam';
 UPDATE places SET population = 2070 WHERE city = 'Abbekerk';
 UPDATE places SET population = 195 WHERE city = 'Haringhuizen';
 UPDATE places SET population = 8585 WHERE city = 'Wieringen';
-Insert into places(city,region,population,country) values('New York','New York',8804190,'USA');            ### this part is to insert city,region and country values
+UPDATE places SET population = 8048 WHERE city = 'Appingedam';
+UPDATE places SET population = 157 WHERE city = 'Barsingerhorn';
+UPDATE places SET population = 46051 WHERE city = 'Delfzijl';
+UPDATE places SET population = 8447 WHERE city = 'Grootebroek';
+UPDATE places SET population = 27992 WHERE city = 'Langedijk';
+UPDATE places SET population = 886 WHERE city = 'Stede Niedorp';
+UPDATE places SET population = 80117 WHERE city = 'Purmerend';
+UPDATE places SET population = 22687 WHERE city = 'Reimerswaal';
+UPDATE places SET population = 8705 WHERE city = 'Wieringen';
+Insert into places(city,region,population,country) values('New York','New York',8804190,'USA');            
 Insert into places(city,region,population,country) values('Los Angeles','California',3898747,'USA');
 Insert into places(city,region,population,country) values('Chicago','Illinois',2746388,'USA');
 Insert into places(city,region,population,country) values('Houston','Texas',2304580,'USA');
@@ -657,7 +666,7 @@ Insert into places(city,region,population,country) values('Federal Way','Washing
 Insert into places(city,region,population,country) values('Clinton','Michigan',100513,'USA');
 Insert into places(city,region,population,country) values('Edinburg','Texas',100243,'USA');
 Insert into places(city,region,population,country) values('Nampa','Idaho',100200,'USA');
-Insert into places(city,region,population,country) values('İstanbul','Marmara Bölgesi', 15462452,'TUR');            ### this part is to insert city,region and country values
+Insert into places(city,region,population,country) values('İstanbul','Marmara Bölgesi', 15462452,'TUR');            
 Insert into places(city,region,population,country) values('Ankara','İç Anadolu Bölgesi', 5663322,'TUR');
 Insert into places(city,region,population,country) values('İzmir','Ege Bölgesi', 4394694,'TUR');
 Insert into places(city,region,population,country) values('Bursa','Marmara Bölgesi', 3101833,'TUR');
