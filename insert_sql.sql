@@ -65,7 +65,7 @@ Insert into places(city,region,country) values('Gramsbergen','Overijssel','NL');
 Insert into places(city,region,country) values('Grave','Noord-Brabant','NL');
 Insert into places(city,region,country) values('Groenlo','Gelderland','NL');
 Insert into places(city,region,country) values('Groningen','Groningen','NL');
-Insert into places(city,region,country) values('Grootebroek ','Noord-Holland','NL');
+Insert into places(city,region,country) values('Grootebroek','Noord-Holland','NL');
 Insert into places(city,region,country) values('Haarlem','Noord-Holland','NL');
 Insert into places(city,region,country) values('Haastrecht','Zuid-Holland','NL');
 Insert into places(city,region,country) values('Hardenberg','Overijssel','NL');
