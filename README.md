@@ -1,5 +1,10 @@
 # Weather-Application
 
+![Screenshot 2022-04-12 at 16 01 28](https://user-images.githubusercontent.com/65411256/162979970-91d6e96a-3fee-419d-837e-2a1d4f40a823.png)
+![Screenshot 2022-04-12 at 16 01 22](https://user-images.githubusercontent.com/65411256/162979975-b026754f-e07b-4d5a-8164-502f7a32da4b.png)
+![Screenshot 2022-04-12 at 16 01 12](https://user-images.githubusercontent.com/65411256/162979979-e13613ac-3f16-4565-9267-cad3b5100284.png)
+
+
 General Info
 * This project will be a Weather Application with a graphical User interface.When the program starts, it should ask to select the country (Netherlands, Turkey or USA). According to the selected country, the provinces should be listed based on the population. User will be able to see the name of the province they chose, the state they are in, the population, weather (as an icon), temperature. With the City search option in the program, it should be able to show the city information and weather conditions.
 
